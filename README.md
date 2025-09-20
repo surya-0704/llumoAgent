@@ -47,8 +47,8 @@ The project is built with Python 3.10+.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <repo-name>
+    git clone https://github.com/surya-0704/llumoAgent
+    cd llumoAgent
     ```
 
 2.  **Create a virtual environment (recommended):**
