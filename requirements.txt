@@ -1,0 +1,2 @@
+# Minimal requirements for this mini-repo (pure python implementation)
+cachetools

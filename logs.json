@@ -1,0 +1,1716 @@
+[
+  {
+    "query_id": "c1f4f277-7298-41d7-b30b-cdb484a762c1",
+    "time": 1758377823.787636,
+    "stage": "received",
+    "detail": {
+      "query": "What is the refund policy?"
+    }
+  },
+  {
+    "query_id": "c1f4f277-7298-41d7-b30b-cdb484a762c1",
+    "time": 1758377823.788776,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "PolicyLookup",
+          "args": {
+            "query": "refund",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "c1f4f277-7298-41d7-b30b-cdb484a762c1",
+    "time": 1758377823.7895212,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "c1f4f277-7298-41d7-b30b-cdb484a762c1",
+    "time": 1758377823.790356,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "c1f4f277-7298-41d7-b30b-cdb484a762c1",
+    "time": 1758377823.7909954,
+    "stage": "final",
+    "detail": {
+      "answer": "PolicyLookup found no results.",
+      "latency_ms": 3
+    }
+  },
+  {
+    "query_id": "3f26bbf4-eef6-4e62-865f-d607ba1ae373",
+    "time": 1758377823.792002,
+    "stage": "received",
+    "detail": {
+      "query": "Compute 12% of 1340 + 50"
+    }
+  },
+  {
+    "query_id": "3f26bbf4-eef6-4e62-865f-d607ba1ae373",
+    "time": 1758377823.7931662,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Calculator",
+          "args": {
+            "expression": "0.12*1340"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "3f26bbf4-eef6-4e62-865f-d607ba1ae373",
+    "time": 1758377823.7939112,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Calculator",
+        "args": {
+          "expression": "0.12*1340"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "3f26bbf4-eef6-4e62-865f-d607ba1ae373",
+    "time": 1758377823.7947874,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Calculator",
+        "args": {
+          "expression": "0.12*1340"
+        },
+        "result": {
+          "expression": "0.12*1340",
+          "value": 160.79999999999998
+        },
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "3f26bbf4-eef6-4e62-865f-d607ba1ae373",
+    "time": 1758377823.7956421,
+    "stage": "final",
+    "detail": {
+      "answer": "Calculator: 0.12*1340 = 160.79999999999998",
+      "latency_ms": 3
+    }
+  },
+  {
+    "query_id": "50917cb4-02db-438e-b55d-50d4a50ae481",
+    "time": 1758377823.7964995,
+    "stage": "received",
+    "detail": {
+      "query": "Find policy about data retention and extract retention duration"
+    }
+  },
+  {
+    "query_id": "50917cb4-02db-438e-b55d-50d4a50ae481",
+    "time": 1758377823.7972872,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "data retention",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "50917cb4-02db-438e-b55d-50d4a50ae481",
+    "time": 1758377823.7982516,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "data retention",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "50917cb4-02db-438e-b55d-50d4a50ae481",
+    "time": 1758377823.7991776,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "data retention",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "50917cb4-02db-438e-b55d-50d4a50ae481",
+    "time": 1758377823.7999113,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 3
+    }
+  },
+  {
+    "query_id": "2d467182-1677-48be-aee3-f3df9f8275af",
+    "time": 1758377823.8006768,
+    "stage": "received",
+    "detail": {
+      "query": "How many days to claim refund for an order?"
+    }
+  },
+  {
+    "query_id": "2d467182-1677-48be-aee3-f3df9f8275af",
+    "time": 1758377823.8015378,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "PolicyLookup",
+          "args": {
+            "query": "refund",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "2d467182-1677-48be-aee3-f3df9f8275af",
+    "time": 1758377823.802419,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "2d467182-1677-48be-aee3-f3df9f8275af",
+    "time": 1758377823.8033924,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": true
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "2d467182-1677-48be-aee3-f3df9f8275af",
+    "time": 1758377823.804453,
+    "stage": "final",
+    "detail": {
+      "answer": "PolicyLookup found no results.",
+      "latency_ms": 3
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8055232,
+    "stage": "received",
+    "detail": {
+      "query": "Extract all percentages from refund policy and compute 15% of 2000"
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8065336,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "PolicyLookup",
+          "args": {
+            "query": "refund",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        },
+        {
+          "id": 2,
+          "tool": "Calculator",
+          "args": {
+            "expression": "0.15*2000"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        },
+        {
+          "id": 3,
+          "tool": "PolicyLookup",
+          "args": {
+            "query": "refund",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        },
+        {
+          "id": 4,
+          "tool": "StringTools",
+          "args": {
+            "action": "extract_percentages"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.807752,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8090866,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": true
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8104248,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 2,
+        "tool": "Calculator",
+        "args": {
+          "expression": "0.15*2000"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.811705,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 2,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Calculator",
+        "args": {
+          "expression": "0.15*2000"
+        },
+        "result": {
+          "expression": "0.15*2000",
+          "value": 300.0
+        },
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.813008,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 3,
+        "tool": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8144443,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 3,
+      "tool_result": {
+        "success": true,
+        "tool_name": "PolicyLookup",
+        "args": {
+          "query": "refund",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": true
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.815924,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 4,
+        "tool": "StringTools",
+        "args": {
+          "action": "extract_percentages"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8176758,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 4,
+      "tool_result": {
+        "success": true,
+        "tool_name": "StringTools",
+        "args": {
+          "action": "extract_percentages"
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "15eb50ec-5695-4350-b1b5-eee4ef64f637",
+    "time": 1758377823.8198142,
+    "stage": "final",
+    "detail": {
+      "answer": "PolicyLookup found no results.\n\nCalculator: 0.15*2000 = 300.0\n\nPolicyLookup found no results.\n\nStringTools: []",
+      "latency_ms": 14
+    }
+  },
+  {
+    "query_id": "4a12aa02-0a60-473f-8262-0f05d360865e",
+    "time": 1758378223.2144063,
+    "stage": "received",
+    "detail": {
+      "query": "What is LLUMO AI's core value proposition?"
+    }
+  },
+  {
+    "query_id": "4a12aa02-0a60-473f-8262-0f05d360865e",
+    "time": 1758378223.2274985,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What is LLUMO AI's core value proposition?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "4a12aa02-0a60-473f-8262-0f05d360865e",
+    "time": 1758378223.2505152,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "4a12aa02-0a60-473f-8262-0f05d360865e",
+    "time": 1758378223.275415,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "4a12aa02-0a60-473f-8262-0f05d360865e",
+    "time": 1758378223.295526,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 81
+    }
+  },
+  {
+    "query_id": "12ba55d4-b5a2-4c5b-aa5e-7bec97a9d6ee",
+    "time": 1758378223.3246903,
+    "stage": "received",
+    "detail": {
+      "query": "What does the LLUMO Debugger show that helps isolate failures?"
+    }
+  },
+  {
+    "query_id": "12ba55d4-b5a2-4c5b-aa5e-7bec97a9d6ee",
+    "time": 1758378223.3677785,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What does the LLUMO Debugger show that helps isolate failures?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "12ba55d4-b5a2-4c5b-aa5e-7bec97a9d6ee",
+    "time": 1758378223.4025645,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "12ba55d4-b5a2-4c5b-aa5e-7bec97a9d6ee",
+    "time": 1758378223.4344304,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "12ba55d4-b5a2-4c5b-aa5e-7bec97a9d6ee",
+    "time": 1758378223.4714513,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 146
+    }
+  },
+  {
+    "query_id": "30c29528-f6c1-47f7-bfed-c9c4e09b1456",
+    "time": 1758378223.511181,
+    "stage": "received",
+    "detail": {
+      "query": "What are the official working hours and overtime rules?"
+    }
+  },
+  {
+    "query_id": "30c29528-f6c1-47f7-bfed-c9c4e09b1456",
+    "time": 1758378223.542149,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What are the official working hours and overtime rules?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "30c29528-f6c1-47f7-bfed-c9c4e09b1456",
+    "time": 1758378223.5702686,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "30c29528-f6c1-47f7-bfed-c9c4e09b1456",
+    "time": 1758378223.598212,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "30c29528-f6c1-47f7-bfed-c9c4e09b1456",
+    "time": 1758378223.6216216,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 110
+    }
+  },
+  {
+    "query_id": "09df0eb5-2d5e-4165-9fea-a411a18ff011",
+    "time": 1758378223.644448,
+    "stage": "received",
+    "detail": {
+      "query": "How do reimbursements work and how long do they take after approval?"
+    }
+  },
+  {
+    "query_id": "09df0eb5-2d5e-4165-9fea-a411a18ff011",
+    "time": 1758378223.6678493,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "How do reimbursements work and how long do they take after approval?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "09df0eb5-2d5e-4165-9fea-a411a18ff011",
+    "time": 1758378223.6927671,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "09df0eb5-2d5e-4165-9fea-a411a18ff011",
+    "time": 1758378223.7124245,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "09df0eb5-2d5e-4165-9fea-a411a18ff011",
+    "time": 1758378223.7323184,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 87
+    }
+  },
+  {
+    "query_id": "26dc5411-aae1-4644-9b23-0beccd7c3431",
+    "time": 1758378223.7531571,
+    "stage": "received",
+    "detail": {
+      "query": "Compute: (125 * 6) - 50 and 15% of 640"
+    }
+  },
+  {
+    "query_id": "26dc5411-aae1-4644-9b23-0beccd7c3431",
+    "time": 1758378223.7883954,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Calculator",
+          "args": {
+            "expression": "0.15*640"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "26dc5411-aae1-4644-9b23-0beccd7c3431",
+    "time": 1758378223.815921,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "26dc5411-aae1-4644-9b23-0beccd7c3431",
+    "time": 1758378223.8369646,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "result": {
+          "expression": "0.15*640",
+          "value": 96.0
+        },
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "26dc5411-aae1-4644-9b23-0beccd7c3431",
+    "time": 1758378223.857956,
+    "stage": "final",
+    "detail": {
+      "answer": "Calculator: 0.15*640 = 96.0",
+      "latency_ms": 104
+    }
+  },
+  {
+    "query_id": "d9bddda2-bc42-4022-b5cf-30d26172fd8e",
+    "time": 1758378380.3735228,
+    "stage": "received",
+    "detail": {
+      "query": "What is LLUMO AI's core value proposition?"
+    }
+  },
+  {
+    "query_id": "d9bddda2-bc42-4022-b5cf-30d26172fd8e",
+    "time": 1758378380.4065187,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What is LLUMO AI's core value proposition?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "d9bddda2-bc42-4022-b5cf-30d26172fd8e",
+    "time": 1758378380.4744587,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "d9bddda2-bc42-4022-b5cf-30d26172fd8e",
+    "time": 1758378380.543138,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "d9bddda2-bc42-4022-b5cf-30d26172fd8e",
+    "time": 1758378380.6293294,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 255
+    }
+  },
+  {
+    "query_id": "c62c234d-0338-4b5e-8014-1462c2247170",
+    "time": 1758378380.684793,
+    "stage": "received",
+    "detail": {
+      "query": "What does the LLUMO Debugger show that helps isolate failures?"
+    }
+  },
+  {
+    "query_id": "c62c234d-0338-4b5e-8014-1462c2247170",
+    "time": 1758378380.7067904,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What does the LLUMO Debugger show that helps isolate failures?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "c62c234d-0338-4b5e-8014-1462c2247170",
+    "time": 1758378380.7437563,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "c62c234d-0338-4b5e-8014-1462c2247170",
+    "time": 1758378380.7766423,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "c62c234d-0338-4b5e-8014-1462c2247170",
+    "time": 1758378380.8126547,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 127
+    }
+  },
+  {
+    "query_id": "e4edee8b-9db5-40bc-a115-60f89e9c7481",
+    "time": 1758378380.8520617,
+    "stage": "received",
+    "detail": {
+      "query": "What are the official working hours and overtime rules?"
+    }
+  },
+  {
+    "query_id": "e4edee8b-9db5-40bc-a115-60f89e9c7481",
+    "time": 1758378380.8973622,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What are the official working hours and overtime rules?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "e4edee8b-9db5-40bc-a115-60f89e9c7481",
+    "time": 1758378380.9313002,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "e4edee8b-9db5-40bc-a115-60f89e9c7481",
+    "time": 1758378380.9678452,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "e4edee8b-9db5-40bc-a115-60f89e9c7481",
+    "time": 1758378381.0206935,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 168
+    }
+  },
+  {
+    "query_id": "a1c5fac7-c7db-4af6-a01b-f41346e54407",
+    "time": 1758378381.0669348,
+    "stage": "received",
+    "detail": {
+      "query": "How do reimbursements work and how long do they take after approval?"
+    }
+  },
+  {
+    "query_id": "a1c5fac7-c7db-4af6-a01b-f41346e54407",
+    "time": 1758378381.10005,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "How do reimbursements work and how long do they take after approval?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "a1c5fac7-c7db-4af6-a01b-f41346e54407",
+    "time": 1758378381.151864,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "a1c5fac7-c7db-4af6-a01b-f41346e54407",
+    "time": 1758378381.2128787,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "result": [],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "a1c5fac7-c7db-4af6-a01b-f41346e54407",
+    "time": 1758378381.2736998,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever found no results.",
+      "latency_ms": 206
+    }
+  },
+  {
+    "query_id": "319124e8-0017-4b63-a4be-e767fc3048eb",
+    "time": 1758378381.3382914,
+    "stage": "received",
+    "detail": {
+      "query": "Compute: (125 * 6) - 50 and 15% of 640"
+    }
+  },
+  {
+    "query_id": "319124e8-0017-4b63-a4be-e767fc3048eb",
+    "time": 1758378381.4273894,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Calculator",
+          "args": {
+            "expression": "0.15*640"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "319124e8-0017-4b63-a4be-e767fc3048eb",
+    "time": 1758378381.4649017,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "319124e8-0017-4b63-a4be-e767fc3048eb",
+    "time": 1758378381.5059013,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "result": {
+          "expression": "0.15*640",
+          "value": 96.0
+        },
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "319124e8-0017-4b63-a4be-e767fc3048eb",
+    "time": 1758378381.541568,
+    "stage": "final",
+    "detail": {
+      "answer": "Calculator: 0.15*640 = 96.0",
+      "latency_ms": 203
+    }
+  },
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "time": 1758379018.0155447,
+    "stage": "received",
+    "detail": {
+      "query": "What is LLUMO AI's core value proposition?"
+    }
+  },
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "time": 1758379018.0636132,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What is LLUMO AI's core value proposition?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "time": 1758379018.0984194,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "time": 1758379018.134443,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What is LLUMO AI's core value proposition?",
+          "k": 3
+        },
+        "result": [
+          {
+            "doc_id": "DOC_1",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Core Value",
+            "text": "LLUMO AI is an evaluation-first reliability layer for LLM apps. It focuses on automated scoring, actionable insights, and cost savings via prompt compression\u00e2\u20ac\u201dhelping teams ship trustworthy AI.",
+            "score": 24
+          },
+          {
+            "doc_id": "DOC_2",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Debugger",
+            "text": "LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+            "score": 21
+          },
+          {
+            "doc_id": "DOC_4",
+            "title": "Finance FAQ \u00e2\u20ac\u201c Reimbursements",
+            "text": "Submit reimbursements within 30 days. Keep original receipts. Typical settlement time is 7 business days after approval.",
+            "score": 14
+          }
+        ],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "time": 1758379018.168451,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever top hit: (DOC_1) LLUMO AI \u00e2\u20ac\u201c Core Value: LLUMO AI is an evaluation-first reliability layer for LLM apps. It focuses on automated scoring, actionable insights, and cost savings via prompt compression\u00e2\u20ac\u201dhelping teams ship trustworthy AI.",
+      "latency_ms": 152
+    }
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "time": 1758379018.2262552,
+    "stage": "received",
+    "detail": {
+      "query": "What does the LLUMO Debugger show that helps isolate failures?"
+    }
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "time": 1758379018.2828946,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What does the LLUMO Debugger show that helps isolate failures?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "time": 1758379018.3609066,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "time": 1758379018.3886743,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What does the LLUMO Debugger show that helps isolate failures?",
+          "k": 3
+        },
+        "result": [
+          {
+            "doc_id": "DOC_2",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Debugger",
+            "text": "LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+            "score": 6
+          },
+          {
+            "doc_id": "DOC_1",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Core Value",
+            "text": "LLUMO AI is an evaluation-first reliability layer for LLM apps. It focuses on automated scoring, actionable insights, and cost savings via prompt compression\u00e2\u20ac\u201dhelping teams ship trustworthy AI.",
+            "score": 2
+          }
+        ],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "time": 1758379018.4147666,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever top hit: (DOC_2) LLUMO AI \u00e2\u20ac\u201c Debugger: LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+      "latency_ms": 188
+    }
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "time": 1758379018.4526725,
+    "stage": "received",
+    "detail": {
+      "query": "What are the official working hours and overtime rules?"
+    }
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "time": 1758379018.5104244,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "What are the official working hours and overtime rules?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "time": 1758379018.5623066,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "time": 1758379018.6063178,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "What are the official working hours and overtime rules?",
+          "k": 3
+        },
+        "result": [
+          {
+            "doc_id": "DOC_3",
+            "title": "Company Policy \u00e2\u20ac\u201c Working Hours",
+            "text": "Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+            "score": 7
+          },
+          {
+            "doc_id": "DOC_1",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Core Value",
+            "text": "LLUMO AI is an evaluation-first reliability layer for LLM apps. It focuses on automated scoring, actionable insights, and cost savings via prompt compression\u00e2\u20ac\u201dhelping teams ship trustworthy AI.",
+            "score": 1
+          },
+          {
+            "doc_id": "DOC_2",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Debugger",
+            "text": "LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+            "score": 1
+          }
+        ],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "time": 1758379018.646215,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever top hit: (DOC_3) Company Policy \u00e2\u20ac\u201c Working Hours: Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+      "latency_ms": 193
+    }
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "time": 1758379018.7380538,
+    "stage": "received",
+    "detail": {
+      "query": "How do reimbursements work and how long do they take after approval?"
+    }
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "time": 1758379018.8316169,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Retriever",
+          "args": {
+            "query": "How do reimbursements work and how long do they take after approval?",
+            "k": 3
+          },
+          "timeout_ms": 2000,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "time": 1758379018.8756506,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "timeout_ms": 2000,
+        "retries": 2
+      }
+    }
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "time": 1758379018.9201891,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Retriever",
+        "args": {
+          "query": "How do reimbursements work and how long do they take after approval?",
+          "k": 3
+        },
+        "result": [
+          {
+            "doc_id": "DOC_3",
+            "title": "Company Policy \u00e2\u20ac\u201c Working Hours",
+            "text": "Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+            "score": 4
+          },
+          {
+            "doc_id": "DOC_4",
+            "title": "Finance FAQ \u00e2\u20ac\u201c Reimbursements",
+            "text": "Submit reimbursements within 30 days. Keep original receipts. Typical settlement time is 7 business days after approval.",
+            "score": 4
+          },
+          {
+            "doc_id": "DOC_2",
+            "title": "LLUMO AI \u00e2\u20ac\u201c Debugger",
+            "text": "LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+            "score": 3
+          }
+        ],
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "time": 1758379018.993786,
+    "stage": "final",
+    "detail": {
+      "answer": "Retriever top hit: (DOC_3) Company Policy \u00e2\u20ac\u201c Working Hours: Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+      "latency_ms": 255
+    }
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "time": 1758379019.0387795,
+    "stage": "received",
+    "detail": {
+      "query": "Compute: (125 * 6) - 50 and 15% of 640"
+    }
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "time": 1758379019.0657916,
+    "stage": "plan",
+    "detail": {
+      "plan": [
+        {
+          "id": 1,
+          "tool": "Calculator",
+          "args": {
+            "expression": "0.15*640"
+          },
+          "timeout_ms": 500,
+          "retries": 1
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "time": 1758379019.1123369,
+    "stage": "tool_call",
+    "detail": {
+      "step": {
+        "id": 1,
+        "tool": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "timeout_ms": 500,
+        "retries": 1
+      }
+    }
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "time": 1758379019.141322,
+    "stage": "tool_return",
+    "detail": {
+      "step_id": 1,
+      "tool_result": {
+        "success": true,
+        "tool_name": "Calculator",
+        "args": {
+          "expression": "0.15*640"
+        },
+        "result": {
+          "expression": "0.15*640",
+          "value": 96.0
+        },
+        "meta": {
+          "latency_ms": 0,
+          "from_cache": false
+        },
+        "error": null
+      }
+    }
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "time": 1758379019.1793394,
+    "stage": "final",
+    "detail": {
+      "answer": "Calculator: 0.15*640 = 96.0",
+      "latency_ms": 140
+    }
+  }
+]

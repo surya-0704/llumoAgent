@@ -1,0 +1,27 @@
+[
+  {
+    "query_id": "c3e99045-e343-45b7-ba7c-7087014cb5c9",
+    "final_answer": "Retriever top hit: (DOC_1) LLUMO AI \u00e2\u20ac\u201c Core Value: LLUMO AI is an evaluation-first reliability layer for LLM apps. It focuses on automated scoring, actionable insights, and cost savings via prompt compression\u00e2\u20ac\u201dhelping teams ship trustworthy AI.",
+    "latency_ms": 152
+  },
+  {
+    "query_id": "f5a7ad53-a889-40cc-bea5-a7363ee6f3df",
+    "final_answer": "Retriever top hit: (DOC_2) LLUMO AI \u00e2\u20ac\u201c Debugger: LLUMO\u00e2\u20ac\u2122s Debugger shows run-level logs, stepwise tool traces, and a flow graph to isolate failure points such as tool selection errors or context mismatch.",
+    "latency_ms": 188
+  },
+  {
+    "query_id": "ac57f308-906a-4ad0-8e67-b1d82fd47d28",
+    "final_answer": "Retriever top hit: (DOC_3) Company Policy \u00e2\u20ac\u201c Working Hours: Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+    "latency_ms": 193
+  },
+  {
+    "query_id": "d14f64e9-091c-4021-a9c2-56bbea93cbc5",
+    "final_answer": "Retriever top hit: (DOC_3) Company Policy \u00e2\u20ac\u201c Working Hours: Standard working hours are 10:00 to 18:30 IST, Monday to Friday. Flexible timings are allowed with manager approval.",
+    "latency_ms": 255
+  },
+  {
+    "query_id": "0b5c39da-8746-49a6-bbe7-3517bb4083e5",
+    "final_answer": "Calculator: 0.15*640 = 96.0",
+    "latency_ms": 140
+  }
+]
