@@ -100,19 +100,6 @@ The planner is **rule-based**.
 
 All agent activities are logged to `logs.json`. Each query gets a unique `query_id`, and the log entry contains the plan, a timeline of events (tool calls, results, errors), and the final answer. This structured format is ideal for debugging and analysis.
 
-## 7. How to Run Tests
-
-The project uses `pytest` for unit testing critical components.
-
-To run the tests, execute the following command from the root directory:
-```bash
-pytest
-```
-
-The tests cover:
--   **Executor**: Caching, retry, and timeout logic.
--   **Tools**: Correctness of the Calculator, StringTools, and Retriever.
-
 ## 8. Assumptions & Limitations
 
 -   The system assumes the `knowledgeBase.txt` file exists in the root directory.
