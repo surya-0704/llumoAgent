@@ -68,12 +68,12 @@ You can run the agent directly from the command line.
 
 **Run with a specific query:**
 ```bash
-python -m agent.agent --query "What is the policy for refunds? And calculate 10% of 2450."
+python agent.py <your-query-here>
 ```
 
 **Run the default example query:**
 ```bash
-python -m agent.agent
+python agent.py
 ```
 
 The agent will process the query, print the final answer to the console, and append a detailed execution log to `logs.json`.

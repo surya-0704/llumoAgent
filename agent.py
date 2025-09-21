@@ -3,7 +3,7 @@ from planner import plan_query
 from executor import execute_tool
 from logger import Logger
 from assembler import assemble_answer
-
+import sys
 logger = Logger('logs.json')
 
 def handle_query(user_query):
@@ -30,22 +30,30 @@ def handle_query(user_query):
     return {'query_id': qid, 'final_answer': final_answer, 'latency_ms': latency_ms}
 
 if __name__ == '__main__':
-    # run sample queries
-    sample_queries = [
-        "What is LLUMO AI's core value proposition?",
-        "What does the LLUMO Debugger show that helps isolate failures?",
-        "What are the official working hours and overtime rules?",
-        "How do reimbursements work and how long do they take after approval?",
-        "Compute: (125 * 6) - 50 and 15% of 640"
-    ]
-    outputs = []
-    for q in sample_queries:
-        out = handle_query(q)
-        print('Query:', q)
-        print('Answer:', out['final_answer'])
-        print('Latency_ms:', out['latency_ms'])
-        print('---')
-        outputs.append(out)
-    # Save a separate file with the run summary
-    with open('run_summary.json','w') as f:
-        json.dump(outputs,f,indent=2)
+    if len(sys.argv) > 1:
+        query = " ".join(sys.argv[1:])
+        out = handle_query(query)
+        print("Query:", query)
+        print("Answer:", out['final_answer'])
+        print("Latency_ms:", out['latency_ms'])
+
+    else:
+        # run sample queries
+        sample_queries = [
+            "What is LLUMO AI's core value proposition?",
+            "What does the LLUMO Debugger show that helps isolate failures?",
+            "What are the official working hours and overtime rules?",
+            "How do reimbursements work and how long do they take after approval?",
+            "Compute: (125 * 6) - 50 and 15% of 640"
+        ]
+        outputs = []
+        for q in sample_queries:
+            out = handle_query(q)
+            print('Query:', q)
+            print('Answer:', out['final_answer'])
+            print('Latency_ms:', out['latency_ms'])
+            print('---')
+            outputs.append(out)
+        # Save a separate file with the run summary
+        with open('run_summary.json','w') as f:
+            json.dump(outputs,f,indent=2)
