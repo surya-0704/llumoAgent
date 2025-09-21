@@ -100,7 +100,7 @@ The planner is **rule-based**.
 
 All agent activities are logged to `logs.json`. Each query gets a unique `query_id`, and the log entry contains the plan, a timeline of events (tool calls, results, errors), and the final answer. This structured format is ideal for debugging and analysis.
 
-## 8. Assumptions & Limitations
+## 7. Assumptions & Limitations
 
 -   The system assumes the `knowledgeBase.txt` file exists in the root directory.
 -   The Planner is designed for relatively simple queries that map directly to the available tools. It cannot handle highly complex, multi-step reasoning that doesn't fit its rules.
